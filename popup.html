@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetterLook</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 25px;
+      width: 330px;
+      background: linear-gradient(145deg, #0a0a0d, #111117);
+      color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-family: "Comic Sans MS", "Comic Relief", sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+      text-align: center;
+      background: linear-gradient(90deg, #474747, #e0e0ff);
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: 1px;
+    }
+
+    .section {
+      background: #15151c;
+      padding: 15px 18px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .section h2 {
+      font-family: "Comic Sans MS", "Comic Relief", sans-serif;
+      font-size: 18px;
+      margin: 0 0 8px;
+      color: #e0e0e0;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: #cacaca;
+      line-height: 1.4;
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      color: #f1f1f1;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .toggle-row input {
+      width: 42px;
+      height: 22px;
+      margin: 0;
+      accent-color: #e0e0ff;
+      cursor: pointer;
+    }
+
+    .toggle-row input:disabled {
+      cursor: wait;
+    }
+
+    #adBlockStatus {
+      min-height: 34px;
+      margin-bottom: 0;
+      font-size: 12px;
+    }
+
+    .setting-select {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 1px solid #3a3b40;
+      border-radius: 8px;
+      background: #202127;
+      color: #f1f1f1;
+      font-size: 14px;
+    }
+
+    #supportBtn {
+      background: #bababd;
+      border: none;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      width: 100%;
+      font-family: "Comic Sans MS", "Comic Relief", sans-serif;
+      font-weight: bold;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    #supportBtn:hover {
+      background: #202021;
+      transform: scale(1.03);
+    }
+
+    .news-box {
+      max-height: 140px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .news-item {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #2b2b35;
+    }
+
+    .news-title {
+      font-family: "Comic Sans MS", "Comic Relief", sans-serif;
+      font-size: 15px;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .news-text {
+      font-size: 13px;
+      color: #dcdcdc;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>BetterLook</h1>
+
+  <div class="section">
+    <h2>Color scheme</h2>
+    <p>Choose an accent color for BetterLook on Better16.</p>
+    <label for="siteColorScheme">Color selection</label>
+    <select id="siteColorScheme" class="setting-select">
+      <option value="grayscale">Grayscale (default)</option>
+      <option value="purple">Purple</option>
+      <option value="orange">Orange</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="red">Red</option>
+    </select>
+    <label for="siteColorShade">Color shade</label>
+    <select id="siteColorShade" class="setting-select">
+      <option value="dark">Dark</option>
+      <option value="medium">Medium</option>
+      <option value="light">Light</option>
+      <option value="gradient">Gradient</option>
+    </select>
+    <p id="colorSchemeStatus" role="status" aria-live="polite">Using the dark grayscale color scheme.</p>
+  </div>
+
+  <div class="section">
+    <h2>Website font</h2>
+    <p>Choose a font for text on Better16. This setting does not affect other websites.</p>
+    <label for="siteFont">Font selection</label>
+    <select id="siteFont" class="setting-select">
+      <option value="default">Better16 default</option>
+      <option value="arial">Arial</option>
+      <option value="verdana">Verdana</option>
+      <option value="trebuchet">Trebuchet MS</option>
+      <option value="georgia">Georgia</option>
+      <option value="comic-sans">Comic Sans MS</option>
+      <option value="courier">Courier New</option>
+    </select>
+    <p id="fontStatus" role="status" aria-live="polite">Using Better16's default font.</p>
+  </div>
+
+  <div class="section">
+    <h2>Ad blocker</h2>
+    <p>Blocks advertisments on Better16.</p>
+    <label class="toggle-row" for="adBlockToggle">
+      <span>Enable ad blocker</span>
+      <input id="adBlockToggle" type="checkbox" aria-describedby="adBlockStatus" />
+    </label>
+    <p id="adBlockStatus" role="status" aria-live="polite">Off by default.</p>
+  </div>
+
+  <div class="section">
+    <h2>Support</h2>
+    <p>Support updates to the BetterLook theme for Better16.</p>
+    <button id="supportBtn">Support the project</button>
+  </div>
+
+  <div class="section">
+    <h2>Patch Notes / News</h2>
+    <div class="news-box">
+      <div class="news-item">
+        <div class="news-title">v26.10.4</div>
+        <div class="news-text">Now the extension is released. Ad Blocker added.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

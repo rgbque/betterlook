@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "BetterLook",
+  "version": "26.10.4",
+  "description": "A sleek dark theme for the Better16 Roblox revival.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "betterlook@better16.xyz",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "permissions": ["storage", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.better16.xyz/*",
+        "https://better16.xyz/*"
+      ],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.better16.xyz/*",
+        "https://better16.xyz/*"
+      ],
+      "js": ["adblock.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BetterLook"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
