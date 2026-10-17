@@ -2,13 +2,14 @@
 
 A theme extension built to give **Better16** a better experience on the web.
 
-Made by [Sylvester](https://better16.xyz/users/2733/profile) on Better16
+Made by [Sylvester](https://better16.wtf/users/2733/profile) on Better16
+Firefox Addon: https://addons.mozilla.org/en-US/firefox/addon/betterlook/
 
 ---
 
 ##  Overview
 
-**BetterLook** upgrades the user interface of [Better16](https://www.better16.xyz)
+**BetterLook** upgrades the user interface of [Better16](https://www.better16.wtf)
 by adding features such as an optional ad blocker, an optional font changer, and a BETTER dark mode.
 
 + color options
@@ -42,17 +43,19 @@ including me!
 ## How to add it to your browser
 
 1. Make sure Dark Mode is on, on the Better16 website first.
-Go to Settings < Privacy, and you should see a option for Dark Mode. Toggle it.
+Go to Settings > Privacy, and you should see a option for Dark Mode. Toggle it. 
 
 2. Unzip [aka uncompress] the extension file
 
 3. follow this tutorial! [YouTube Vid](https://www.youtube.com/watch?v=dhaGRJvJAII)
 
-Note: Again, Firefox support will be added soon! Its already submitted, I just need it to get reviewed.
+### Firefox
+
+1. Toggle Dark Mode on Better16 via Settings > Privacy
+
+Add it to your browser: https://addons.mozilla.org/en-US/firefox/addon/betterlook/
 
 ### Misc.
-
-- a Light Mode version will be added soon (hopefully in the next version)
 
 - a Discord Server will be added soon for bug reporting
 
