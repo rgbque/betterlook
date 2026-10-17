@@ -41,7 +41,7 @@ including me!
 
 ---
 
-## How to add it to your browser
+## How to add it to your browser - Chrome and Others
 
 1. Make sure Dark Mode is on, on the Better16 website first.
 Go to Settings > Privacy, and you should see a option for Dark Mode. Toggle it. 
