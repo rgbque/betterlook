@@ -3,6 +3,7 @@
 A theme extension built to give **Better16** a better experience on the web.
 
 Made by [Sylvester](https://better16.wtf/users/2733/profile) on Better16
+---
 Firefox Addon: https://addons.mozilla.org/en-US/firefox/addon/betterlook/
 
 ---
