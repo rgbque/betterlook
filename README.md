@@ -55,6 +55,7 @@ Go to Settings > Privacy, and you should see a option for Dark Mode. Toggle it.
 1. Toggle Dark Mode on Better16 via Settings > Privacy
 
 Add it to your browser: https://addons.mozilla.org/en-US/firefox/addon/betterlook/
+
 ---
 ### Misc.
 
